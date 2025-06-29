@@ -24,25 +24,24 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
-          <div className="absolute inset-0 opacity-80">
-            <div className="absolute inset-0 bg-gradient-to-r from-fancoach-teal/20 via-purple-600/30 to-blue-600/20 animate-gradient-x"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-fancoach-teal/10 to-purple-800/20 animate-gradient-y"></div>
-            <div className="absolute inset-0 bg-gradient-to-bl from-blue-800/20 via-transparent to-fancoach-teal/20 animate-gradient-xy"></div>
-          </div>
-          <div className="absolute inset-0 backdrop-blur-3xl"></div>
+        {/* Base Background */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
+        
+        {/* Animated Gradient Layers */}
+        <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-fancoach-teal/30 via-purple-600/40 to-blue-600/30 animate-gradient-x"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-fancoach-teal/20 to-purple-800/30 animate-gradient-y"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-blue-800/30 via-transparent to-fancoach-teal/30 animate-gradient-xy"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-20 text-center max-w-4xl mx-auto animate-slide-up px-4 md:px-0 py-8 md:py-0">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 md:mb-3 leading-tight text-white/90">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 md:mb-3 leading-tight" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
             Understand Every Play.{' '}
-            <span className="text-fancoach-teal/95">Instantly.</span>
+            <span style={{ color: 'rgba(0, 212, 170, 0.85)' }}>Instantly.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300/80 mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed" style={{ color: 'rgba(209, 213, 219, 0.7)' }}>
             No more sitting around totally and utterly confused while your expert sports friends dominate the conversation... 
             <br /><br />
             FanCoach will train you to be the best fan you can be... get real-time explanations after each play, definitions, and interactive breakdowns that make every game easy to follow.
