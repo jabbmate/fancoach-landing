@@ -37,12 +37,12 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-20 text-center max-w-4xl mx-auto animate-slide-up px-4 md:px-0 py-8 md:py-0">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 md:mb-3 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 md:mb-3 leading-tight text-white/90">
             Understand Every Play.{' '}
-            <span className="text-fancoach-teal">Instantly.</span>
+            <span className="text-fancoach-teal/95">Instantly.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300 mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300/80 mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed">
             No more sitting around totally and utterly confused while your expert sports friends dominate the conversation... 
             <br /><br />
             FanCoach will train you to be the best fan you can be... get real-time explanations after each play, definitions, and interactive breakdowns that make every game easy to follow.
