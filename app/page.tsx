@@ -23,17 +23,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8">
-        {/* Background with Gradient */}
+      <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Animated Gradient Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-90 z-10"></div>
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat bg-gray-900"
-            style={{
-              backgroundImage: "url('/hero.jpg')",
-              filter: 'blur(2px)',
-            }}
-          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
+          <div className="absolute inset-0 opacity-80">
+            <div className="absolute inset-0 bg-gradient-to-r from-fancoach-teal/20 via-purple-600/30 to-blue-600/20 animate-gradient-x"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-fancoach-teal/10 to-purple-800/20 animate-gradient-y"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-blue-800/20 via-transparent to-fancoach-teal/20 animate-gradient-xy"></div>
+          </div>
+          <div className="absolute inset-0 backdrop-blur-3xl"></div>
         </div>
 
         {/* Hero Content */}
