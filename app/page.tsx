@@ -53,6 +53,17 @@ export default function Home() {
             <EmailCaptureForm />
           </div>
 
+          {/* Featured Image */}
+          <div className="mt-8 flex justify-center">
+            <div className="border-2 border-fancoach-teal rounded-lg p-2 bg-black/20 backdrop-blur-sm">
+              <img
+                src="/image.png"
+                alt="FanCoach Feature"
+                className="rounded-md max-w-full h-auto max-h-64 md:max-h-80"
+              />
+            </div>
+          </div>
+
           <p className="text-sm text-gray-400 mt-6">
             Starting with American Football • Coming Soon to iOS & Android
           </p>
