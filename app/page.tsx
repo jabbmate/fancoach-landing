@@ -79,9 +79,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Spacer between hero and next section */}
-      <div className="py-16 md:py-24"></div>
-
       <AppShowcase />
 
       <Footer />
