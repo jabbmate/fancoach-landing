@@ -43,52 +43,128 @@ a {
   }
 }
 
-/* Gradient Animations */
-@keyframes gradient-x {
+/* Lava Lamp Animations */
+@keyframes lava-blob-1 {
   0%, 100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.7;
+    transform: translate(-30%, -20%) rotate(0deg) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    opacity: 0.8;
   }
-  50% {
-    transform: translateX(50%) scale(1.1);
-    opacity: 1;
-  }
-}
-
-@keyframes gradient-y {
-  0%, 100% {
-    transform: translateY(-30%) rotate(0deg);
+  25% {
+    transform: translate(-10%, -40%) rotate(90deg) scale(1.2);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     opacity: 0.6;
   }
   50% {
-    transform: translateY(30%) rotate(2deg);
+    transform: translate(20%, -10%) rotate(180deg) scale(0.9);
+    border-radius: 50% 60% 30% 60% / 60% 30% 60% 40%;
     opacity: 0.9;
   }
-}
-
-@keyframes gradient-xy {
-  0%, 100% {
-    transform: translate(20%, -20%) rotate(-1deg) scale(0.9);
-    opacity: 0.5;
-  }
-  33% {
-    transform: translate(-20%, 10%) rotate(1deg) scale(1.1);
-    opacity: 0.8;
-  }
-  66% {
-    transform: translate(30%, -30%) rotate(-0.5deg) scale(1);
+  75% {
+    transform: translate(10%, -30%) rotate(270deg) scale(1.1);
+    border-radius: 60% 40% 60% 30% / 30% 60% 40% 70%;
     opacity: 0.7;
   }
 }
 
-.animate-gradient-x {
-  animation: gradient-x 8s ease-in-out infinite;
+@keyframes lava-blob-2 {
+  0%, 100% {
+    transform: translate(30%, 20%) rotate(0deg) scale(1.1);
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate(50%, -10%) rotate(120deg) scale(0.8);
+    border-radius: 70% 30% 60% 40% / 60% 40% 70% 30%;
+    opacity: 0.9;
+  }
+  66% {
+    transform: translate(10%, 40%) rotate(240deg) scale(1.3);
+    border-radius: 30% 70% 40% 60% / 50% 30% 60% 70%;
+    opacity: 0.6;
+  }
 }
 
-.animate-gradient-y {
-  animation: gradient-y 12s ease-in-out infinite;
+@keyframes lava-blob-3 {
+  0%, 100% {
+    transform: translate(0%, 30%) rotate(0deg) scale(0.9);
+    border-radius: 50% 50% 80% 20% / 60% 20% 80% 40%;
+    opacity: 0.8;
+  }
+  20% {
+    transform: translate(-20%, 10%) rotate(72deg) scale(1.2);
+    border-radius: 80% 20% 50% 50% / 40% 60% 20% 80%;
+    opacity: 0.5;
+  }
+  40% {
+    transform: translate(30%, -20%) rotate(144deg) scale(1);
+    border-radius: 20% 80% 50% 50% / 80% 40% 60% 20%;
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate(-10%, -30%) rotate(216deg) scale(1.1);
+    border-radius: 50% 50% 20% 80% / 20% 80% 40% 60%;
+    opacity: 0.7;
+  }
+  80% {
+    transform: translate(20%, 20%) rotate(288deg) scale(0.8);
+    border-radius: 50% 50% 80% 20% / 60% 20% 80% 40%;
+    opacity: 0.6;
+  }
 }
 
-.animate-gradient-xy {
-  animation: gradient-xy 15s ease-in-out infinite;
+@keyframes lava-blob-4 {
+  0%, 100% {
+    transform: translate(-20%, 40%) rotate(0deg) scale(1);
+    border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(40%, -20%) rotate(180deg) scale(1.4);
+    border-radius: 30% 70% 50% 50% / 70% 30% 50% 50%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes lava-blob-5 {
+  0%, 100% {
+    transform: translate(40%, -30%) rotate(0deg) scale(0.7);
+    border-radius: 60% 40% 80% 20% / 50% 70% 30% 50%;
+    opacity: 0.9;
+  }
+  25% {
+    transform: translate(-30%, -10%) rotate(90deg) scale(1.3);
+    border-radius: 40% 60% 20% 80% / 70% 30% 50% 50%;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(10%, 30%) rotate(180deg) scale(1);
+    border-radius: 80% 20% 60% 40% / 30% 50% 70% 50%;
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(-10%, 10%) rotate(270deg) scale(0.9);
+    border-radius: 20% 80% 40% 60% / 50% 50% 30% 70%;
+    opacity: 0.7;
+  }
+}
+
+.animate-lava-blob-1 {
+  animation: lava-blob-1 20s ease-in-out infinite;
+}
+
+.animate-lava-blob-2 {
+  animation: lava-blob-2 25s ease-in-out infinite;
+}
+
+.animate-lava-blob-3 {
+  animation: lava-blob-3 30s ease-in-out infinite;
+}
+
+.animate-lava-blob-4 {
+  animation: lava-blob-4 18s ease-in-out infinite;
+}
+
+.animate-lava-blob-5 {
+  animation: lava-blob-5 22s ease-in-out infinite;
 } 

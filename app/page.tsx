@@ -27,11 +27,22 @@ export default function Home() {
         {/* Base Background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
         
-        {/* Animated Gradient Layers */}
+        {/* Lava Lamp Animated Blobs */}
         <div className="absolute inset-0 z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-fancoach-teal/30 via-purple-600/40 to-blue-600/30 animate-gradient-x"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-fancoach-teal/20 to-purple-800/30 animate-gradient-y"></div>
-          <div className="absolute inset-0 bg-gradient-to-bl from-blue-800/30 via-transparent to-fancoach-teal/30 animate-gradient-xy"></div>
+          {/* Blob 1 - Teal */}
+          <div className="absolute w-96 h-96 bg-gradient-radial from-fancoach-teal/40 via-fancoach-teal/20 to-transparent rounded-full blur-xl animate-lava-blob-1 top-1/4 left-1/4"></div>
+          
+          {/* Blob 2 - Purple */}
+          <div className="absolute w-80 h-80 bg-gradient-radial from-purple-600/35 via-purple-600/15 to-transparent rounded-full blur-xl animate-lava-blob-2 top-1/3 right-1/4"></div>
+          
+          {/* Blob 3 - Blue */}
+          <div className="absolute w-72 h-72 bg-gradient-radial from-blue-600/40 via-blue-600/20 to-transparent rounded-full blur-xl animate-lava-blob-3 bottom-1/3 left-1/3"></div>
+          
+          {/* Blob 4 - Teal-Purple Mix */}
+          <div className="absolute w-64 h-64 bg-gradient-radial from-cyan-500/30 via-teal-600/15 to-transparent rounded-full blur-xl animate-lava-blob-4 bottom-1/4 right-1/3"></div>
+          
+          {/* Blob 5 - Purple-Blue Mix */}
+          <div className="absolute w-88 h-88 bg-gradient-radial from-indigo-600/35 via-purple-700/18 to-transparent rounded-full blur-xl animate-lava-blob-5 top-1/2 left-1/2"></div>
         </div>
 
         {/* Hero Content */}
