@@ -3,6 +3,7 @@ import Logo from '@/components/Logo'
 import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
 import Footer from '@/components/Footer'
+import SilkBackground from '@/components/SilkBackground'
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
         {/* Base Background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
+        
+        {/* Silk Background */}
+        <SilkBackground className="z-5" />
         
         {/* Lava Lamp Animated Blobs */}
         <div className="absolute inset-0 z-10">
