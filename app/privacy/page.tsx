@@ -2,10 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import Logo from '@/components/Logo'
 import Footer from '@/components/Footer'
+import AuthWrapper from '@/components/AuthWrapper'
 
 export default function Privacy() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <AuthWrapper>
+      <main className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="p-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -85,6 +87,7 @@ export default function Privacy() {
       </section>
 
       <Footer />
-    </main>
+      </main>
+    </AuthWrapper>
   )
 } 

@@ -4,10 +4,12 @@ import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
 import Footer from '@/components/Footer'
 import SilkBackground from '@/components/SilkBackground'
+import AuthWrapper from '@/components/AuthWrapper'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <AuthWrapper>
+      <main className="min-h-screen">
       {/* Navigation */}
       <nav className="relative z-10 p-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -68,6 +70,7 @@ export default function Home() {
       <AppShowcase />
 
       <Footer />
-    </main>
+      </main>
+    </AuthWrapper>
   )
 } 

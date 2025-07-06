@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Play, BookOpen, MessageCircle } from 'lucide-react'
 import Logo from '@/components/Logo'
 import Footer from '@/components/Footer'
+import AuthWrapper from '@/components/AuthWrapper'
 
 export default function About() {
   const features = [
@@ -24,7 +25,8 @@ export default function About() {
   ]
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <AuthWrapper>
+      <main className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="p-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -99,6 +101,7 @@ export default function About() {
       </section>
 
       <Footer />
-    </main>
+      </main>
+    </AuthWrapper>
   )
 } 
