@@ -49,7 +49,7 @@ export default function Home() {
         <div className="relative z-20 text-center max-w-4xl mx-auto animate-slide-up px-4 md:px-0 py-8 md:py-0">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 md:mb-3 leading-tight" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
             Understand Every Play.{' '}
-            <span style={{ color: 'rgba(0, 212, 170, 0.85)' }}>Instantly.</span>
+            <span className="gradient-text">Instantly.</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed" style={{ color: 'rgba(209, 213, 219, 0.7)' }}>
