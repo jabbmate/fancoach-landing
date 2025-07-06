@@ -172,18 +172,30 @@ a {
 /* Gradient Text Effect */
 .gradient-text {
   background: linear-gradient(135deg, #00D4AA 0%, #00E5FF 50%, #40E0D0 100%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   animation: gradient-shift 3s ease-in-out infinite;
+  /* Fallback for browsers that don't support background-clip: text */
+  display: inline-block;
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .gradient-text {
+    background: none;
+    color: #00D4AA;
+    -webkit-text-fill-color: #00D4AA;
+  }
 }
 
 @keyframes gradient-shift {
   0%, 100% {
-    background: linear-gradient(135deg, #00D4AA 0%, #00E5FF 50%, #40E0D0 100%);
+    background-position: 0% 50%;
   }
   50% {
-    background: linear-gradient(135deg, #40E0D0 0%, #00D4AA 50%, #00E5FF 100%);
+    background-position: 100% 50%;
   }
 } 
