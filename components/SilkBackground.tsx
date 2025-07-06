@@ -23,67 +23,90 @@ const SilkBackground: React.FC<SilkBackgroundProps> = ({ className = '' }) => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Silk animation variables
+    // Silk wave animation variables
     let animationId: number;
-    const points: Array<{ x: number; y: number; vx: number; vy: number }> = [];
-    const numPoints = 8;
-    const connectionDistance = 200;
+    let time = 0;
+    const waves: Array<{
+      amplitude: number;
+      frequency: number;
+      phase: number;
+      speed: number;
+      color: string;
+      opacity: number;
+    }> = [];
 
-    // Initialize points
-    for (let i = 0; i < numPoints; i++) {
-      points.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+    // Initialize waves
+    for (let i = 0; i < 6; i++) {
+      waves.push({
+        amplitude: 50 + Math.random() * 100,
+        frequency: 0.005 + Math.random() * 0.01,
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.01 + Math.random() * 0.02,
+        color: `rgba(0, 212, 170, ${0.1 + Math.random() * 0.2})`,
+        opacity: 0.1 + Math.random() * 0.3,
       });
     }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      time += 0.01;
 
-      // Update points
-      points.forEach((point) => {
-        point.x += point.vx;
-        point.y += point.vy;
-
-        // Bounce off edges
-        if (point.x < 0 || point.x > canvas.width) point.vx *= -1;
-        if (point.y < 0 || point.y > canvas.height) point.vy *= -1;
-
-        // Keep points in bounds
-        point.x = Math.max(0, Math.min(canvas.width, point.x));
-        point.y = Math.max(0, Math.min(canvas.height, point.y));
-      });
-
-      // Draw connections
-      ctx.strokeStyle = 'rgba(0, 212, 170, 0.1)';
-      ctx.lineWidth = 1;
-
-      for (let i = 0; i < points.length; i++) {
-        for (let j = i + 1; j < points.length; j++) {
-          const dx = points[i].x - points[j].x;
-          const dy = points[i].y - points[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < connectionDistance) {
-            const opacity = 1 - distance / connectionDistance;
-            ctx.strokeStyle = `rgba(0, 212, 170, ${opacity * 0.3})`;
-            ctx.beginPath();
-            ctx.moveTo(points[i].x, points[i].y);
-            ctx.lineTo(points[j].x, points[j].y);
-            ctx.stroke();
+      // Draw flowing silk waves
+      waves.forEach((wave, index) => {
+        ctx.beginPath();
+        ctx.strokeStyle = wave.color;
+        ctx.lineWidth = 2 + Math.sin(time + index) * 1;
+        
+        // Create flowing wave pattern
+        for (let x = 0; x <= canvas.width; x += 2) {
+          const y1 = canvas.height * 0.3 + 
+                    Math.sin(x * wave.frequency + time * wave.speed + wave.phase) * wave.amplitude +
+                    Math.sin(x * wave.frequency * 2 + time * wave.speed * 1.5) * wave.amplitude * 0.5;
+          
+          const y2 = canvas.height * 0.7 + 
+                    Math.cos(x * wave.frequency + time * wave.speed + wave.phase + Math.PI) * wave.amplitude +
+                    Math.cos(x * wave.frequency * 1.5 + time * wave.speed * 0.8) * wave.amplitude * 0.3;
+          
+          if (x === 0) {
+            ctx.moveTo(x, y1);
+          } else {
+            ctx.lineTo(x, y1);
           }
         }
-      }
+        ctx.stroke();
 
-      // Draw points
-      points.forEach((point) => {
-        ctx.fillStyle = 'rgba(0, 212, 170, 0.6)';
+        // Draw second wave layer
         ctx.beginPath();
-        ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.strokeStyle = `rgba(0, 212, 170, ${wave.opacity * 0.6})`;
+        ctx.lineWidth = 1 + Math.cos(time + index) * 0.5;
+        
+        for (let x = 0; x <= canvas.width; x += 3) {
+          const y = canvas.height * 0.5 + 
+                   Math.sin(x * wave.frequency * 1.2 + time * wave.speed * 0.7 + wave.phase) * wave.amplitude * 0.8 +
+                   Math.sin(x * wave.frequency * 0.8 + time * wave.speed * 1.2) * wave.amplitude * 0.4;
+          
+          if (x === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+        ctx.stroke();
       });
+
+      // Add flowing particles
+      for (let i = 0; i < 12; i++) {
+        const particleX = (time * 20 + i * 100) % (canvas.width + 100);
+        const particleY = canvas.height * 0.5 + 
+                         Math.sin(particleX * 0.01 + time * 2) * 100 +
+                         Math.cos(particleX * 0.008 + time * 1.5) * 60;
+        
+        ctx.fillStyle = `rgba(0, 212, 170, ${0.3 + Math.sin(time + i) * 0.2})`;
+        ctx.beginPath();
+        ctx.arc(particleX, particleY, 1 + Math.sin(time + i) * 1, 0, Math.PI * 2);
+        ctx.fill();
+      }
 
       animationId = requestAnimationFrame(animate);
     };
@@ -100,7 +123,7 @@ const SilkBackground: React.FC<SilkBackgroundProps> = ({ className = '' }) => {
     <canvas
       ref={canvasRef}
       className={`absolute inset-0 pointer-events-none ${className}`}
-      style={{ zIndex: 1 }}
+      style={{ zIndex: 10 }}
     />
   );
 };
