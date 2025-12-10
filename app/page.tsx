@@ -26,7 +26,7 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
         {/* Base Background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
-        
+
         {/* Silk Background */}
         <SilkBackground className="z-10" />
 
@@ -36,9 +36,9 @@ export default function Home() {
             Understand Every Play.{' '}
             <span className="gradient-text">Instantly.</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl mb-8 md:mb-6 max-w-4xl mx-auto leading-relaxed" style={{ color: 'rgba(209, 213, 219, 0.7)' }}>
-            No more sitting around totally and utterly confused while your expert sports friends dominate the conversation... 
+            No more sitting around totally and utterly confused while your expert sports friends dominate the conversation...
             <br /><br />
             FanCoach will train you to be the best fan you can be... get real-time explanations after each play, definitions, and interactive breakdowns that make every game easy to follow.
           </p>
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           <p className="text-sm text-gray-400 mt-6">
-            Starting with American Football • Coming Soon to iOS & Android
+            Starting with American Football • Coming soon to the Google Play Store
           </p>
         </div>
       </section>
@@ -71,17 +71,17 @@ export default function Home() {
           <p className="text-xl text-gray-300 mb-8">
             Now available on the iOS App Store. Start your journey to becoming a smarter fan.
           </p>
-          
+
           <div className="flex justify-center mb-12">
-            <a 
-              href="https://apps.apple.com/us/app/fancoach-understand-every-play/id6474636302" 
-              target="_blank" 
+            <a
+              href="https://apps.apple.com/us/app/fancoach-understand-every-play/id6474636302"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105"
             >
-              <img 
-                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?releaseDate=1703030400" 
-                alt="Download on the App Store" 
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?releaseDate=1703030400"
+                alt="Download on the App Store"
                 style={{ width: '160px', height: '53px' }}
               />
             </a>
@@ -101,6 +101,6 @@ export default function Home() {
       <AppShowcase />
 
       <Footer />
-      </main>
+    </main >
   )
 } 
