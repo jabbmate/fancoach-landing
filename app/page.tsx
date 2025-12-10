@@ -4,12 +4,9 @@ import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
 import Footer from '@/components/Footer'
 import SilkBackground from '@/components/SilkBackground'
-import AuthWrapper from '@/components/AuthWrapper'
-
 export default function Home() {
   return (
-    <AuthWrapper>
-      <main className="min-h-screen">
+    <main className="min-h-screen">
       {/* Navigation */}
       <nav className="relative z-10 p-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -67,10 +64,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* App Store & Support Section */}
+      <section className="bg-gray-900 py-16 px-6 relative z-10 border-t border-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Get FanCoach Today</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Now available on the iOS App Store. Start your journey to becoming a smarter fan.
+          </p>
+          
+          <div className="flex justify-center mb-12">
+            <a 
+              href="https://apps.apple.com/us/app/fancoach-understand-every-play/id6474636302" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block transition-transform hover:scale-105"
+            >
+              <img 
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?releaseDate=1703030400" 
+                alt="Download on the App Store" 
+                style={{ width: '160px', height: '53px' }}
+              />
+            </a>
+          </div>
+
+          <div className="border-t border-gray-800 pt-8">
+            <p className="text-gray-400">
+              Need help or have suggestions?
+              <br />
+              <a href="mailto:fancoachai@gmail.com" className="text-fancoach-teal hover:underline mt-2 inline-block">
+                fancoachai@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
       <AppShowcase />
 
       <Footer />
       </main>
-    </AuthWrapper>
   )
 } 

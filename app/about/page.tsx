@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Play, BookOpen, MessageCircle } from 'lucide-react'
 import Logo from '@/components/Logo'
 import Footer from '@/components/Footer'
-import AuthWrapper from '@/components/AuthWrapper'
+
 
 export default function About() {
   const features = [
@@ -25,8 +25,7 @@ export default function About() {
   ]
 
   return (
-    <AuthWrapper>
-      <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="p-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -52,7 +51,7 @@ export default function About() {
             <span className="text-fancoach-teal">Coach</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
-            FanCoach transforms how new and casual fans experience live sports. 
+            FanCoach transforms how new and casual fans experience live sports.
             Never feel lost during a game again.
           </p>
         </div>
@@ -65,7 +64,7 @@ export default function About() {
             {features.map((feature, index) => {
               const IconComponent = feature.icon
               return (
-                <div 
+                <div
                   key={index}
                   className="bg-gray-900 rounded-xl p-8 hover:bg-gray-800 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -91,7 +90,7 @@ export default function About() {
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of fans who are already signed up for early access.
           </p>
-          <Link 
+          <Link
             href="/"
             className="inline-block bg-fancoach-teal text-black font-semibold px-8 py-4 rounded-lg hover:bg-opacity-90 hover:transform hover:scale-105 transition-all duration-200"
           >
@@ -101,7 +100,6 @@ export default function About() {
       </section>
 
       <Footer />
-      </main>
-    </AuthWrapper>
+    </main>
   )
 } 
