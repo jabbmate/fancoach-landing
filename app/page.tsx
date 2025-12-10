@@ -61,6 +61,15 @@ export default function Home() {
           <p className="text-sm text-gray-400 mt-6">
             Starting with American Football • Coming soon to the Google Play Store
           </p>
+
+          <div className="mt-6 flex justify-center">
+            <a
+              href="/privacy"
+              className="px-6 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-800 text-gray-300 hover:text-white transition-all duration-200 text-sm backdrop-blur-sm"
+            >
+              View Privacy Policy
+            </a>
+          </div>
         </div>
       </section>
 

@@ -38,49 +38,43 @@ export default function Privacy() {
 
             <div className="space-y-8">
               <section>
-                <h2 className="text-3xl font-bold mb-4 text-white">Information We Collect</h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">No Personal Information Collected</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  At FanCoach, we are committed to protecting your privacy. This policy outlines
-                  how we collect, use, and protect your personal information when you use our
-                  sports education app and related services.
+                  FanCoach does not require you to create an account or log in. We do not collect, store, or process
+                  any personal information such as your name, email address, phone number, or physical location.
+                  Because there are no user accounts, we do not hold any data that can be linked back to you as an individual.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-3xl font-bold mb-4 text-white">How We Use Your Information</h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Anonymized Analytics</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  We use the information we collect to provide, maintain, and improve our services,
-                  including delivering personalized sports education content and real-time game
-                  explanations tailored to your interests and skill level.
+                  We use third-party analytics tools to collect anonymized usage data. This helps us understand specific
+                  interactions within the app, such as which features are most popular or where crashes occur.
+                  This data is completely aggregated and cannot be used to identify you personally. We use this information
+                  solely to improve the app's performance and user experience.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-3xl font-bold mb-4 text-white">Data Security</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  We implement appropriate technical and organizational security measures to protect
-                  your personal information against unauthorized access, alteration, disclosure, or
-                  destruction. Your data is encrypted both in transit and at rest.
+                  Since we do not collect personal data, there is no risk of your personal information being exposed.
+                  The anonymized analytics data is stored securely by our analytics providers and is restricted to
+                  authorized personnel for development purposes only.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-3xl font-bold mb-4 text-white">Contact Us</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  If you have any questions about this Privacy Policy or our data practices,
-                  please contact us at privacy@fancoach.app. We are committed to addressing
-                  your concerns and ensuring your privacy is protected.
+                  If you have any questions about this Privacy Policy, please contact us at
+                  <a href="mailto:fancoachai@gmail.com" className="text-fancoach-teal hover:underline ml-1">fancoachai@gmail.com</a>.
                 </p>
               </section>
             </div>
 
-            <div className="mt-12 p-6 bg-gray-900 rounded-lg border border-gray-800">
-              <p className="text-sm text-gray-400">
-                <strong>Note:</strong> This is a placeholder privacy policy for the FanCoach
-                pre-launch landing page. A comprehensive privacy policy will be implemented
-                before the app launch, in compliance with applicable privacy laws and regulations.
-              </p>
-            </div>
+
           </div>
         </div>
       </section>
