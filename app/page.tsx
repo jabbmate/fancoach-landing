@@ -18,6 +18,9 @@ export default function Home() {
             <a href="/privacy" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
               Privacy
             </a>
+            <a href="/hiring" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200 font-medium">
+              We're Hiring
+            </a>
           </div>
         </div>
       </nav>

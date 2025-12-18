@@ -20,6 +20,9 @@ export default function Privacy() {
             <Link href="/about" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
               About
             </Link>
+            <Link href="/hiring" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200 font-medium">
+              We're Hiring
+            </Link>
           </div>
         </div>
       </nav>

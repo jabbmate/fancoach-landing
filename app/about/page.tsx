@@ -39,6 +39,9 @@ export default function About() {
             <Link href="/privacy" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
               Privacy
             </Link>
+            <Link href="/hiring" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200 font-medium">
+              We're Hiring
+            </Link>
           </div>
         </div>
       </nav>
