@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '@/components/Logo'
 import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
+import VideoShowcase from '@/components/VideoShowcase'
 import Footer from '@/components/Footer'
 import SilkBackground from '@/components/SilkBackground'
 export default function Home() {
@@ -50,15 +51,9 @@ export default function Home() {
             <EmailCaptureForm />
           </div>
 
-          {/* Featured Image */}
-          <div className="mt-8 flex justify-center">
-            <div className="border-2 border-fancoach-teal rounded-lg p-2 bg-black/20 backdrop-blur-sm">
-              <img
-                src="/hero-screenshot.png"
-                alt="FanCoach Feature"
-                className="rounded-md max-w-full h-auto max-h-64 md:max-h-80"
-              />
-            </div>
+          {/* Featured Videos */}
+          <div className="mt-8 mb-12">
+            <VideoShowcase />
           </div>
 
           <p className="text-sm text-gray-400 mt-6">
