@@ -4,7 +4,7 @@ import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
 import VideoShowcase from '@/components/VideoShowcase'
 import Footer from '@/components/Footer'
-import SilkBackground from '@/components/SilkBackground'
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -29,10 +29,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
         {/* Base Background */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800"></div>
-
-        {/* Silk Background */}
-        <SilkBackground className="z-10" />
+        {/* Base Background - Solid Black */}
+        <div className="absolute inset-0 z-0 bg-black"></div>
 
         {/* Hero Content */}
         <div className="relative z-20 text-center max-w-4xl mx-auto animate-slide-up px-4 md:px-0 py-8 md:py-0">

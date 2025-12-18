@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import Logo from '@/components/Logo'
 import Footer from '@/components/Footer'
-import SilkBackground from '@/components/SilkBackground'
+
 
 export default function Hiring() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-black to-slate-800 fixed h-full w-full"></div>
-      <SilkBackground className="z-10 fixed h-full w-full opacity-50" />
+      {/* Background - Solid Black */}
+      <div className="absolute inset-0 z-0 bg-black fixed h-full w-full"></div>
 
       <div className="relative z-20">
         {/* Navigation */}
