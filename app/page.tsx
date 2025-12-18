@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="flex justify-center mb-12">
             <a
-              href="https://apps.apple.com/us/app/fancoach-understand-every-play/id6474636302"
+              href="https://apps.apple.com/us/app/fancoach/id6756193930"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105"
