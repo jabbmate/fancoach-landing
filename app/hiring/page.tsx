@@ -71,7 +71,7 @@ export default function Hiring() {
                     <p className="font-semibold text-white mb-2">👉 Try it yourself:</p>
                     <ul className="list-none space-y-2 pl-0">
                       <li>
-                        📲 <a href="https://apps.apple.com/us/app/fancoach-understand-every-play/id6474636302" target="_blank" rel="noopener noreferrer" className="text-fancoach-teal hover:underline">Download FanCoach on the App Store</a>
+                        📲 <a href="https://apps.apple.com/us/app/fancoach/id6756193930" target="_blank" rel="noopener noreferrer" className="text-fancoach-teal hover:underline">Download FanCoach on the App Store</a>
                       </li>
                       <li>
                         🌐 <a href="https://fancoach.ai" target="_blank" rel="noopener noreferrer" className="text-fancoach-teal hover:underline">Visit fancoach.ai</a>
@@ -137,7 +137,7 @@ export default function Hiring() {
                   <p>
                     At its core, this role is about owning and evolving the FanCoach codebase — and thriving in the challenge of doing so in an early-stage startup environment.
                   </p>
-                  
+
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Technical Requirements</h3>
                     <ul className="list-disc pl-5 space-y-2">
@@ -212,8 +212,8 @@ export default function Hiring() {
                 <p className="text-xl text-gray-300 mb-8">
                   Send your resume and links to anything cool you’ve built to
                 </p>
-                <a 
-                  href="mailto:fancoachai@gmail.com" 
+                <a
+                  href="mailto:fancoachai@gmail.com"
                   className="inline-block bg-fancoach-teal text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-opacity-90 hover:shadow-[0_0_20px_rgba(0,212,170,0.3)] transition-all duration-300"
                 >
                   fancoachai@gmail.com
