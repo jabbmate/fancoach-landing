@@ -30,7 +30,7 @@ export default function VideoShowcase() {
     }, [isMuted2])
 
     return (
-        <div className="relative w-full max-w-3xl mx-auto mt-8">
+        <div className="relative w-full max-w-md mx-auto mt-8">
             {/* Video Container */}
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center">
                 {/* Video 1 */}
