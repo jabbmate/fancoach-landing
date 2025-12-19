@@ -1,7 +1,18 @@
 import React from 'react'
 
+
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'FanCoach is hiring!',
+  description: 'Join FanCoach as a Technical Co-Founder / Founding CTO. Help us build the default layer between live sports and how fans understand the game.',
+  openGraph: {
+    title: 'FanCoach is hiring!',
+    description: 'Join FanCoach as a Technical Co-Founder / Founding CTO. Help us build the default layer between live sports and how fans understand the game.',
+  },
+}
 
 
 export default function Hiring() {
