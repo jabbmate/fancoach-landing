@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Play, BookOpen, MessageCircle } from 'lucide-react'
-import Logo from '@/components/Logo'
+import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 
@@ -27,24 +27,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="p-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/">
-            <Logo />
-          </Link>
-          <div className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
-              Home
-            </Link>
-            <Link href="/privacy" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
-              Privacy
-            </Link>
-            <Link href="/hiring" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200 font-medium">
-              We're Hiring
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

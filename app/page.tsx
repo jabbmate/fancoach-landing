@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '@/components/Logo'
+import Navbar from '@/components/Navbar'
 import EmailCaptureForm from '@/components/EmailCaptureForm'
 import AppShowcase from '@/components/AppShowcase'
 import VideoShowcase from '@/components/VideoShowcase'
@@ -9,22 +9,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Navigation */}
-      <nav className="relative z-10 p-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Logo />
-          <div className="hidden md:flex space-x-8">
-            <a href="/about" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
-              About
-            </a>
-            <a href="/privacy" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200">
-              Privacy
-            </a>
-            <a href="/hiring" className="text-gray-300 hover:text-fancoach-teal transition-colors duration-200 font-medium">
-              We're Hiring
-            </a>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-[75vh] flex items-center justify-center px-6 sm:px-6 lg:px-8 overflow-hidden">
