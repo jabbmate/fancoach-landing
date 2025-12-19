@@ -85,7 +85,19 @@ export default async function Image() {
                             display: 'flex',
                         }}
                     >
-                        Seed-Funded AI Sports Tech Startup · United States · Remote OK
+                        Seed-Funded AI Sports Tech Startup · United States
+                    </div>
+                    <div
+                        style={{
+                            fontSize: 30,
+                            color: '#d1d5db',
+                            marginTop: 10,
+                            maxWidth: 900,
+                            textAlign: 'center',
+                            display: 'flex',
+                        }}
+                    >
+                        Remote OK
                     </div>
                 </div>
             </div>
