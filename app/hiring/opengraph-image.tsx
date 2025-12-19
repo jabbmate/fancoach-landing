@@ -77,10 +77,10 @@ export default async function Image() {
                     {/* Subheading / Tagline */}
                     <div
                         style={{
-                            fontSize: 30,
-                            color: '#d1d5db',
+                            fontSize: 42,
+                            color: '#e5e7eb',
                             marginTop: 40,
-                            maxWidth: 900,
+                            maxWidth: 1000,
                             textAlign: 'center',
                             display: 'flex',
                         }}
@@ -89,8 +89,8 @@ export default async function Image() {
                     </div>
                     <div
                         style={{
-                            fontSize: 30,
-                            color: '#d1d5db',
+                            fontSize: 42,
+                            color: '#e5e7eb',
                             marginTop: 10,
                             maxWidth: 900,
                             textAlign: 'center',
