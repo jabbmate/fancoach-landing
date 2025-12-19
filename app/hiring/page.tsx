@@ -41,12 +41,13 @@ export default function Hiring() {
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technical Co-Founder / <span className="gradient-text">Founding CTO</span>
+                Technical Co-Founder / <br className="block md:hidden" />
+                <span className="gradient-text">Founding CTO</span>
               </h1>
-              <div className="flex flex-wrap justify-center gap-4 text-gray-300 text-lg">
-                <span>FanCoach — Seed-Funded AI Sports Tech Startup</span>
-                <span className="hidden sm:inline">•</span>
-                <span>United States · Remote OK</span>
+              <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-4 text-gray-300 items-center">
+                <span className="text-xs md:text-lg whitespace-nowrap">FanCoach — Seed-Funded AI Sports Tech Startup</span>
+                <span className="hidden md:inline text-lg">•</span>
+                <span className="text-lg">United States · Remote OK</span>
               </div>
             </div>
 
