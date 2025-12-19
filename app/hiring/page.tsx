@@ -59,7 +59,7 @@ export default function Hiring() {
                     FanCoach is building a smarter, more fun way to follow live sports, turning real-time game moments into personalized, AI-powered commentary that helps fans understand what’s happening and why it matters. We transform live sports data into dynamic “commentary cards” that adapt to different fan styles — casual, analytical, strategy-focused, or hype-driven.
                   </p>
                   <p>
-                    Our goal is to become the default layer between live sports and how fans understand the game—and we believe owning that layer is a unicorn-scale opportunity.
+                    Our goal is to become the default layer between live sports and how fans understand the game — and we believe owning that layer is a unicorn-scale opportunity.
                   </p>
                   <p>
                     We believe the next generation of sports fans will not follow games the same way previous generations did. Watching a game with a second screen in hand — checking stats, context, explanations, and reactions — is already normal, and it’s only becoming more universal. FanCoach is being built for that reality: a world where fans expect instant understanding alongside the live broadcast.
