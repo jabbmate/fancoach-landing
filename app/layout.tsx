@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fancoach.ai'),
   title: 'FanCoach - Understand Every Play. Instantly.',
   description: 'A mobile-first sports-education app for new and casual fans. Get real-time explanations during live games with simple cards, glossary terms, and interactive breakdowns.',
   keywords: 'sports, education, football, fan, coach, live games, explanations',
