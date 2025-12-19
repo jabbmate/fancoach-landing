@@ -85,7 +85,7 @@ export default async function Image() {
                             display: 'flex',
                         }}
                     >
-                        Seed-Funded AI Sports Tech Startup · United States
+                        Seed-Funded AI Sports Tech Startup
                     </div>
                     <div
                         style={{
@@ -97,7 +97,7 @@ export default async function Image() {
                             display: 'flex',
                         }}
                     >
-                        Remote OK
+                        United States · Remote OK
                     </div>
                 </div>
             </div>
