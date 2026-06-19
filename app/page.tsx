@@ -38,11 +38,6 @@ export default function Home() {
             <VideoShowcase />
           </div>
 
-          <p className="text-sm text-gray-400 mt-6">
-            Starting with American Football • Coming soon to the Google Play Store
-          </p>
-
-
         </div>
       </section>
 
