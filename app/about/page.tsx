@@ -3,62 +3,63 @@ import Link from 'next/link'
 import { Play, BookOpen, MessageCircle } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
+import AppStoreBadge from '@/components/AppStoreBadge'
 
 export default function About() {
   const features = [
     {
       icon: Play,
-      title: "Real-Time Cards",
-      description: "Get instant explanations for every play as it happens. No more confusion about what just occurred on the field."
+      title: 'Real-time cards',
+      description:
+        'Instant explanations for every play as it happens. No more confusion about what just occurred on the field.',
     },
     {
       icon: BookOpen,
-      title: "Beginner Glossary",
-      description: "Tap any term to get simple, clear definitions. Build your sports vocabulary one play at a time."
+      title: 'Beginner glossary',
+      description:
+        'Tap any term to get simple, clear definitions. Build your sports vocabulary one play at a time.',
     },
     {
       icon: MessageCircle,
-      title: "Interactive Chat",
-      description: "Ask questions and get detailed breakdowns with diagrams. Your personal coach is always ready to help."
-    }
+      title: 'Ask FanCoach AI',
+      description:
+        'Ask questions and get detailed breakdowns in plain English. Your personal coach is always ready to help.',
+    },
   ]
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      {/* Navigation */}
+    <main className="min-h-screen bg-ground text-ink">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Your Personal Sports{' '}
-            <span className="text-fancoach-teal">Coach</span>
+      {/* Hero */}
+      <section className="px-5 py-20 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="font-display text-4xl font-extrabold tracking-tight md:text-6xl">
+            Your personal sports <span className="gradient-text">coach.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
-            FanCoach transforms how new and casual fans experience live sports.
-            Never feel lost during a game again.
+          <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-ink-soft">
+            FanCoach transforms how new and casual fans experience live sports. Never feel lost
+            during a game again.
           </p>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+      {/* Features */}
+      <section className="px-5 pb-8 sm:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-5 md:grid-cols-3">
+            {features.map((feature) => {
               const IconComponent = feature.icon
               return (
                 <div
-                  key={index}
-                  className="bg-gray-900 rounded-xl p-8 hover:bg-gray-800 transition-all duration-300 hover:transform hover:scale-105"
+                  key={feature.title}
+                  className="rounded-3xl border border-line bg-surface p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
                 >
-                  <div className="bg-fancoach-teal bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-fancoach-teal" />
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-fancoach-mint text-fancoach-forest">
+                    <IconComponent className="h-7 w-7" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <h3 className="font-display text-xl font-bold">{feature.title}</h3>
+                  <p className="mt-2.5 leading-relaxed text-ink-soft">{feature.description}</p>
                 </div>
               )
             })}
@@ -66,26 +67,27 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Level Up Your{' '}
-            <span className="text-fancoach-teal">Game Knowledge?</span>
+      {/* CTA */}
+      <section className="px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-5xl">
+            Ready to level up your <span className="gradient-text">game knowledge?</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of fans who are already signed up for early access.
+          <p className="mx-auto mt-5 max-w-xl text-lg text-ink-soft">
+            Download FanCoach free and let the next game explain itself.
           </p>
-          <Link
-            href="/"
-            className="inline-block bg-fancoach-teal text-black font-semibold px-8 py-4 rounded-lg hover:bg-opacity-90 hover:transform hover:scale-105 transition-all duration-200"
-          >
-            Get Early Access
-          </Link>
+          <div className="mt-9 flex justify-center">
+            <AppStoreBadge />
+          </div>
+          <p className="mt-6 text-sm text-ink-faint">
+            <Link href="/" className="text-fancoach-green hover:underline">
+              Back to home
+            </Link>
+          </p>
         </div>
       </section>
 
       <Footer />
     </main>
   )
-} 
+}

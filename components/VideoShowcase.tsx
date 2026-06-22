@@ -30,11 +30,11 @@ export default function VideoShowcase() {
     }, [isMuted2])
 
     return (
-        <div className="relative w-full max-w-md mx-auto mt-8">
+        <div className="relative mx-auto w-full max-w-2xl">
             {/* Video Container */}
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center">
+            <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-7">
                 {/* Video 1 */}
-                <div className="relative w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border border-gray-800 bg-black group">
+                <div className="group relative w-full overflow-hidden rounded-3xl border border-line bg-black shadow-card md:w-1/2">
                     <div className="aspect-[9/16] relative">
                         <video
                             ref={videoReference1}
@@ -43,7 +43,7 @@ export default function VideoShowcase() {
                             loop
                             muted={isMuted1}
                             playsInline
-                            src="/frat-bro-ad.mov"
+                            src="/frat-bro-ad.mp4"
                         />
                         {/* Individual Volume Control 1 */}
                         <div className="absolute bottom-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -63,7 +63,7 @@ export default function VideoShowcase() {
                 </div>
 
                 {/* Video 2 */}
-                <div className="relative w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border border-gray-800 bg-black group">
+                <div className="group relative w-full overflow-hidden rounded-3xl border border-line bg-black shadow-card md:w-1/2">
                     <div className="aspect-[9/16] relative">
                         <video
                             ref={videoReference2}
@@ -72,7 +72,7 @@ export default function VideoShowcase() {
                             loop
                             muted={isMuted2}
                             playsInline
-                            src="/girl-fantasy-ad.mov"
+                            src="/girl-fantasy-ad.mp4"
                         />
                         {/* Individual Volume Control 2 */}
                         <div className="absolute bottom-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -17,14 +17,8 @@ export const metadata: Metadata = {
 
 export default function Hiring() {
   return (
-    <main className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background */}
-      {/* Background - Solid Black */}
-      <div className="absolute inset-0 z-0 bg-black fixed h-full w-full"></div>
-
+    <main className="relative min-h-screen overflow-hidden bg-ground text-ink">
       <div className="relative z-20">
-        {/* Navigation */}
-        {/* Navigation */}
         <Navbar />
 
         {/* Content */}
@@ -35,18 +29,18 @@ export default function Hiring() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Technical Co-Founder / <span className="gradient-text">Founding CTO</span>
               </h1>
-              <div className="flex flex-wrap justify-center gap-4 text-gray-300 text-lg">
+              <div className="flex flex-wrap justify-center gap-4 text-ink-soft text-lg">
                 <span>FanCoach — Seed-Funded AI Sports Tech Startup</span>
                 <span className="hidden sm:inline">•</span>
                 <span>United States · Remote OK</span>
               </div>
             </div>
 
-            <div className="prose prose-invert prose-lg max-w-none space-y-12">
+            <div className="prose prose-lg max-w-none space-y-12">
               {/* About FanCoach */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">About FanCoach</h2>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">About FanCoach</h2>
+                <div className="space-y-6 text-ink-soft leading-relaxed">
                   <p>
                     FanCoach is building a smarter, more fun way to follow live sports, turning real-time game moments into personalized, AI-powered commentary that helps fans understand what’s happening and why it matters. We transform live sports data into dynamic “commentary cards” that adapt to different fan styles — casual, analytical, strategy-focused, or hype-driven.
                   </p>
@@ -59,8 +53,8 @@ export default function Hiring() {
                   <p>
                     We launched with the NFL, but this is only the opening kickoff. FanCoach is designed as a multi-sport platform, with a long-term vision to expand across leagues and redefine how fans experience live games. This is a massive, underbuilt category, and we’re building with the conviction that this becomes the default way fans engage with live sports — not an add-on, but an expectation.
                   </p>
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 my-6">
-                    <p className="font-semibold text-white mb-2">👉 Try it yourself:</p>
+                  <div className="my-6 rounded-2xl border border-line bg-surface p-6 shadow-card">
+                    <p className="font-semibold text-ink mb-2">👉 Try it yourself:</p>
                     <ul className="list-none space-y-2 pl-0">
                       <li>
                         📲 <a href="https://apps.apple.com/us/app/fancoach/id6756193930" target="_blank" rel="noopener noreferrer" className="text-fancoach-teal hover:underline">Download FanCoach on the App Store</a>
@@ -71,20 +65,20 @@ export default function Hiring() {
                     </ul>
                   </div>
                   <div className="grid sm:grid-cols-3 gap-4 mt-8">
-                    <div className="bg-gray-800/30 p-4 rounded-lg text-center">
+                    <div className="rounded-2xl border border-line bg-surface p-4 text-center shadow-card">
                       <div className="text-2xl mb-1">🚀</div>
-                      <div className="font-medium text-white">Live MVP</div>
-                      <div className="text-sm text-gray-400">on iOS App Store</div>
+                      <div className="font-medium text-ink">Live MVP</div>
+                      <div className="text-sm text-ink-faint">on iOS App Store</div>
                     </div>
-                    <div className="bg-gray-800/30 p-4 rounded-lg text-center">
+                    <div className="rounded-2xl border border-line bg-surface p-4 text-center shadow-card">
                       <div className="text-2xl mb-1">🌱</div>
-                      <div className="font-medium text-white">Seed Funding</div>
-                      <div className="text-sm text-gray-400">in place</div>
+                      <div className="font-medium text-ink">Seed Funding</div>
+                      <div className="text-sm text-ink-faint">in place</div>
                     </div>
-                    <div className="bg-gray-800/30 p-4 rounded-lg text-center">
+                    <div className="rounded-2xl border border-line bg-surface p-4 text-center shadow-card">
                       <div className="text-2xl mb-1">📈</div>
-                      <div className="font-medium text-white">Strong Momentum</div>
-                      <div className="text-sm text-gray-400">clear roadmap</div>
+                      <div className="font-medium text-ink">Strong Momentum</div>
+                      <div className="text-sm text-ink-faint">clear roadmap</div>
                     </div>
                   </div>
                 </div>
@@ -92,8 +86,8 @@ export default function Hiring() {
 
               {/* About the Founder */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">About the Founder</h2>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">About the Founder</h2>
+                <div className="space-y-6 text-ink-soft leading-relaxed">
                   <p>
                     FanCoach was founded by Yuva Gambhir, a University of Pennsylvania senior studying Cognitive Science (Computation & Cognition). Yuva has experience across technology, analytics, and early-stage startup building, most recently founding an AI startup at the intersection of AI and sports.
                   </p>
@@ -105,8 +99,8 @@ export default function Hiring() {
 
               {/* The Role */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">The Role</h2>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">The Role</h2>
+                <div className="space-y-6 text-ink-soft leading-relaxed">
                   <p>
                     We’re looking for a Technical Co-Founder / Founding CTO to join FanCoach at a pivotal stage and own the technical foundation of the company.
                   </p>
@@ -124,14 +118,14 @@ export default function Hiring() {
 
               {/* Core Responsibilities */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">Core Responsibilities & What We’re Looking For</h2>
-                <div className="space-y-8 text-gray-300 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">Core Responsibilities & What We’re Looking For</h2>
+                <div className="space-y-8 text-ink-soft leading-relaxed">
                   <p>
                     At its core, this role is about owning and evolving the FanCoach codebase — and thriving in the challenge of doing so in an early-stage startup environment.
                   </p>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">Technical Requirements</h3>
+                    <h3 className="text-xl font-bold text-ink mb-3">Technical Requirements</h3>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Strong experience with React Native (2–3+ years required)</li>
                       <li>Solid backend experience with Node.js (2–3+ years required)</li>
@@ -141,7 +135,7 @@ export default function Hiring() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">Startup & Ownership Mindset</h3>
+                    <h3 className="text-xl font-bold text-ink mb-3">Startup & Ownership Mindset</h3>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Comfortable working in an early-stage startup with ambiguity, fast iteration, and constant problem-solving</li>
                       <li>Entrepreneurial mindset — motivated to help build a company, not just an app</li>
@@ -150,7 +144,7 @@ export default function Hiring() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">Attitude & Personal Qualities</h3>
+                    <h3 className="text-xl font-bold text-ink mb-3">Attitude & Personal Qualities</h3>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Hardworking, high-agency, and self-directed</li>
                       <li>An A-type problem solver who genuinely enjoys tackling difficult challenges</li>
@@ -160,7 +154,7 @@ export default function Hiring() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">Interest in Sports</h3>
+                    <h3 className="text-xl font-bold text-ink mb-3">Interest in Sports</h3>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>A genuine interest in sports — you enjoy watching games, following leagues, or thinking deeply about how fans engage with sports</li>
                       <li>Excited to start with the NFL and help expand FanCoach into other sports over time</li>
@@ -168,7 +162,7 @@ export default function Hiring() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">Minimum Education Requirement</h3>
+                    <h3 className="text-xl font-bold text-ink mb-3">Minimum Education Requirement</h3>
                     <p className="mb-2">Either:</p>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Currently enrolled in an undergraduate program studying Computer Science or a related field, or</li>
@@ -180,16 +174,16 @@ export default function Hiring() {
 
               {/* Compensation */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">Compensation</h2>
-                <p className="text-gray-300 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">Compensation</h2>
+                <p className="text-ink-soft leading-relaxed">
                   Compensation will be discussed based on fit, commitment level, and role structure, and will include meaningful equity along with future cash compensation as the company scales.
                 </p>
               </section>
 
               {/* Why FanCoach */}
               <section>
-                <h2 className="text-3xl font-bold mb-6 text-white border-b border-gray-800 pb-2">Why FanCoach</h2>
-                <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                <h2 className="text-3xl font-bold mb-6 text-ink border-b border-line pb-2">Why FanCoach</h2>
+                <ul className="list-disc pl-5 space-y-2 text-ink-soft">
                   <li>Be a true technical co-founder, not just an early employee</li>
                   <li>Build on top of a live, funded product with real traction</li>
                   <li>Shape both the technology and the company from an early stage</li>
@@ -199,14 +193,14 @@ export default function Hiring() {
               </section>
 
               {/* Call to Action */}
-              <section className="bg-gradient-to-r from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 text-center mt-16 transform hover:scale-[1.01] transition-transform duration-300">
-                <h2 className="text-3xl font-bold mb-4 text-white">Interested?</h2>
-                <p className="text-xl text-gray-300 mb-8">
+              <section className="mt-16 rounded-3xl border border-line bg-fancoach-mint p-8 text-center transition-transform duration-300 hover:scale-[1.01]">
+                <h2 className="mb-4 text-3xl font-bold text-ink">Interested?</h2>
+                <p className="mb-8 text-xl text-ink-soft">
                   Send your resume and links to anything cool you’ve built to
                 </p>
                 <a
                   href="mailto:fancoachai@gmail.com"
-                  className="inline-block bg-fancoach-teal text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-opacity-90 hover:shadow-[0_0_20px_rgba(0,212,170,0.3)] transition-all duration-300"
+                  className="inline-block rounded-full bg-fancoach-green px-8 py-4 text-lg font-bold text-white transition-all duration-300 hover:bg-fancoach-forest"
                 >
                   fancoachai@gmail.com
                 </a>
