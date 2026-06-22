@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://fancoach.ai'),
   title: 'FanCoach — Watch sports like you actually get it.',
   description:
-    'FanCoach explains every play as it happens, lets you ask anything about the game, and turns watching into a contest with friends. Live scores for MLB, NBA, NFL and soccer. Free on the App Store.',
+    'FanCoach explains every play as it happens, lets you ask anything about the game, and turns watching into a contest with friends. Live scores for MLB, NBA, WNBA, NFL and soccer. Free on the App Store.',
   keywords:
     'sports, education, football, baseball, basketball, soccer, fan, coach, live scores, play explanations, predictions',
   authors: [{ name: 'FanCoach' }],

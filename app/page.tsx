@@ -6,9 +6,10 @@ import PhoneFrame from '@/components/PhoneFrame'
 import VideoShowcase from '@/components/VideoShowcase'
 import AppStoreBadge from '@/components/AppStoreBadge'
 import LeaderboardCard from '@/components/LeaderboardCard'
-import { Radio, Sparkles, Trophy, ArrowUpRight, Check } from 'lucide-react'
+import AnnouncerStyles from '@/components/AnnouncerStyles'
+import { Radio, Sparkles, Trophy, ArrowUpRight, Check, Megaphone } from 'lucide-react'
 
-const LEAGUES = ['MLB', 'NBA', 'NFL', 'Soccer']
+const LEAGUES = ['MLB', 'NBA', 'WNBA', 'NFL', 'Soccer']
 
 const BENEFITS = [
   {
@@ -70,7 +71,7 @@ export default function Home() {
                 <AppStoreBadge />
                 <div className="text-center sm:text-left">
                   <p className="font-display text-sm font-bold text-ink">Free to download</p>
-                  <p className="text-sm text-ink-faint">iPhone · MLB, NBA, NFL &amp; soccer</p>
+                  <p className="text-sm text-ink-faint">iPhone · MLB, NBA, WNBA, NFL &amp; soccer</p>
                 </div>
               </div>
             </div>
@@ -95,6 +96,83 @@ export default function Home() {
                 {l}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ PLAY & COMPETE (highlight) ============ */}
+      <section className="relative overflow-hidden bg-fancoach-mint/40">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-0 top-1/2 -z-0 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-fancoach-green/10 blur-3xl"
+        />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-28">
+          {/* Copy */}
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-fancoach-green/30 bg-surface px-3.5 py-1.5 shadow-card">
+              <Trophy className="h-3.5 w-3.5 text-fancoach-forest" />
+              <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-fancoach-forest">
+                Play &amp; compete
+              </span>
+            </span>
+
+            <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+              Call the game. Climb the board.{' '}
+              <span className="gradient-text">Risk nothing.</span>
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              Make fun predictions with FanCoins — never real cash, ever. Go head-to-head with your
+              friends on a live leaderboard, talk your trash, and chase the top spot. It&apos;s all the
+              thrill of calling the game with nothing but bragging rights on the line.
+            </p>
+
+            <ul className="mt-7 space-y-3.5">
+              {[
+                { b: 'Zero money down', t: 'Play with FanCoins, not your wallet — no betting, no risk, just fun.' },
+                { b: 'Beat your friends', t: 'Climb a live leaderboard and settle who really knows the game.' },
+                { b: 'Learn why you missed', t: 'FanCoach breaks down every wrong call so your next one lands.' },
+              ].map(({ b, t }) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-fancoach-green text-white">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                  </span>
+                  <span className="text-ink-soft">
+                    <span className="font-semibold text-ink">{b}.</span> {t}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-8 font-display text-2xl font-extrabold tracking-tight text-ink">
+              Prove you <span className="gradient-text">know ball.</span>
+            </p>
+          </div>
+
+          {/* Fun leaderboard UI */}
+          <div className="flex justify-center lg:justify-end">
+            <LeaderboardCard />
+          </div>
+        </div>
+      </section>
+
+      {/* ============ ANNOUNCER STYLES ============ */}
+      <section className="border-t border-line bg-surface">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="mb-4 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-fancoach-green">
+              Commentary, your way
+            </p>
+            <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+              Choose your AI announcer.
+            </h2>
+            <p className="mt-4 text-lg text-ink-soft">
+              A straight-laced coach, an unhinged superfan, a stats nerd, a locker-room insider — or
+              roll your own. FanCoach calls every play in that style, in any language you choose.
+            </p>
+          </div>
+          <div className="mt-12">
+            <AnnouncerStyles />
           </div>
         </div>
       </section>
@@ -175,11 +253,21 @@ export default function Home() {
               The question you&apos;d be embarrassed to ask out loud.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Tap any play and ask whatever&apos;s on your mind — &ldquo;what just happened?&rdquo;,
-              &ldquo;why does this matter?&rdquo;, &ldquo;break down the matchup.&rdquo; You get a
-              straight answer, no judgment, no commercial break.
+              Tap any play and ask whatever&apos;s on your mind — what just happened, why it matters,
+              who to watch next. You get a straight answer, no judgment, no commercial break.
             </p>
-            <div className="mt-7 flex flex-wrap gap-2.5">
+            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-fancoach-green/30 bg-fancoach-mint/60 p-4">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-fancoach-green text-white">
+                <Radio className="h-4 w-4" strokeWidth={2.25} />
+              </span>
+              <p className="text-sm leading-relaxed text-ink-soft">
+                Unlike ChatGPT or Claude, FanCoach is plugged into the{' '}
+                <span className="font-semibold text-ink">live game</span>. Ask about the play that
+                just happened and get a real-time, up-to-the-second answer — not a guess from last
+                year&apos;s training data.
+              </p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2.5">
               {['What just happened on this play?', 'Why does this play matter?', 'What should I watch for next?'].map(
                 (q) => (
                   <span
@@ -195,63 +283,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ PLAY & COMPETE (highlight) ============ */}
-      <section className="relative overflow-hidden border-t border-line bg-fancoach-mint/40">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute right-0 top-1/2 -z-0 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-fancoach-green/10 blur-3xl"
-        />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-28">
-          {/* Copy */}
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-fancoach-green/30 bg-surface px-3.5 py-1.5 shadow-card">
-              <Trophy className="h-3.5 w-3.5 text-fancoach-forest" />
-              <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-fancoach-forest">
-                Play &amp; compete
-              </span>
-            </span>
-
-            <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
-              Call the game. Climb the board.{' '}
-              <span className="gradient-text">Risk nothing.</span>
-            </h2>
-
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Make fun predictions with FanCoins — never real cash, ever. Go head-to-head with your
-              friends on a live leaderboard, talk your trash, and chase the top spot. It&apos;s all the
-              thrill of calling the game with nothing but bragging rights on the line.
-            </p>
-
-            <ul className="mt-7 space-y-3.5">
-              {[
-                { b: 'Zero money down', t: 'Play with FanCoins, not your wallet — no betting, no risk, just fun.' },
-                { b: 'Beat your friends', t: 'Climb a live leaderboard and settle who really knows the game.' },
-                { b: 'Learn why you missed', t: 'FanCoach breaks down every wrong call so your next one lands.' },
-              ].map(({ b, t }) => (
-                <li key={b} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-fancoach-green text-white">
-                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
-                  </span>
-                  <span className="text-ink-soft">
-                    <span className="font-semibold text-ink">{b}.</span> {t}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-8 font-display text-2xl font-extrabold tracking-tight text-ink">
-              Prove you <span className="gradient-text">know ball.</span>
-            </p>
-          </div>
-
-          {/* Fun leaderboard UI */}
-          <div className="flex justify-center lg:justify-end">
-            <LeaderboardCard />
-          </div>
-        </div>
-      </section>
-
-      {/* ============ VIDEO SHOWCASE ============ */}
+      {/* ============ VIDEO SHOWCASE + AMBASSADORS ============ */}
       <section className="border-t border-line bg-surface">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="mx-auto max-w-2xl text-center">
@@ -262,8 +294,39 @@ export default function Home() {
               Made for the way real fans watch.
             </h2>
           </div>
-          <div className="mt-12">
+
+          <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
             <VideoShowcase />
+
+            {/* Ambassador call-out */}
+            <div className="rounded-3xl border border-fancoach-green/30 bg-fancoach-mint/50 p-7 shadow-card sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-surface text-fancoach-forest shadow-card">
+                <Megaphone className="h-6 w-6" strokeWidth={2} />
+              </div>
+              <h3 className="mt-5 font-display text-2xl font-extrabold tracking-tight text-ink">
+                Want to be a FanCoach ambassador?
+              </h3>
+              <p className="mt-3 leading-relaxed text-ink-soft">
+                We&apos;re a brand-new sports app on the rise, and we&apos;re looking for people who
+                love it as much as we do. Reach out to learn more.
+              </p>
+
+              <div className="mt-5 border-t border-fancoach-green/20 pt-5">
+                <p className="leading-relaxed text-ink-soft">
+                  Post about FanCoach on your socials — AI-generated or your own content — and you
+                  could become an official{' '}
+                  <span className="font-semibold text-ink">social media ambassador</span>. Curious?
+                  Let&apos;s talk.
+                </p>
+                <a
+                  href="mailto:fancoachai@gmail.com?subject=FanCoach%20Social%20Media%20Ambassador"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-surface transition-transform duration-200 hover:-translate-y-0.5"
+                >
+                  Reach out
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
