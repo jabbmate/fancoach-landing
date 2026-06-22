@@ -5,7 +5,8 @@ import HeroShowcase from '@/components/HeroShowcase'
 import PhoneFrame from '@/components/PhoneFrame'
 import VideoShowcase from '@/components/VideoShowcase'
 import AppStoreBadge from '@/components/AppStoreBadge'
-import { Radio, Sparkles, Trophy, ArrowUpRight } from 'lucide-react'
+import LeaderboardCard from '@/components/LeaderboardCard'
+import { Radio, Sparkles, Trophy, ArrowUpRight, Check } from 'lucide-react'
 
 const LEAGUES = ['MLB', 'NBA', 'NFL', 'Soccer']
 
@@ -22,8 +23,8 @@ const BENEFITS = [
   },
   {
     icon: Trophy,
-    title: 'Skin in the game',
-    body: 'Predictions, FanCoins and a friends leaderboard turn passive watching into a contest you actually want to win.',
+    title: 'Bragging rights, no betting',
+    body: 'Predict with FanCoins — never real money — and climb a friends leaderboard. All the thrill of calling the game, none of the risk.',
   },
 ]
 
@@ -190,6 +191,62 @@ export default function Home() {
                 ),
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ PLAY & COMPETE (highlight) ============ */}
+      <section className="relative overflow-hidden border-t border-line bg-fancoach-mint/40">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-0 top-1/2 -z-0 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-fancoach-green/10 blur-3xl"
+        />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-28">
+          {/* Copy */}
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-fancoach-green/30 bg-surface px-3.5 py-1.5 shadow-card">
+              <Trophy className="h-3.5 w-3.5 text-fancoach-forest" />
+              <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-fancoach-forest">
+                Play &amp; compete
+              </span>
+            </span>
+
+            <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+              Call the game. Climb the board.{' '}
+              <span className="gradient-text">Risk nothing.</span>
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              Make fun predictions with FanCoins — never real cash, ever. Go head-to-head with your
+              friends on a live leaderboard, talk your trash, and chase the top spot. It&apos;s all the
+              thrill of calling the game with nothing but bragging rights on the line.
+            </p>
+
+            <ul className="mt-7 space-y-3.5">
+              {[
+                { b: 'Zero money down', t: 'Play with FanCoins, not your wallet — no betting, no risk, just fun.' },
+                { b: 'Beat your friends', t: 'Climb a live leaderboard and settle who really knows the game.' },
+                { b: 'Learn why you missed', t: 'FanCoach breaks down every wrong call so your next one lands.' },
+              ].map(({ b, t }) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-fancoach-green text-white">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                  </span>
+                  <span className="text-ink-soft">
+                    <span className="font-semibold text-ink">{b}.</span> {t}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-8 font-display text-2xl font-extrabold tracking-tight text-ink">
+              Prove you <span className="gradient-text">know ball.</span>
+            </p>
+          </div>
+
+          {/* Fun leaderboard UI */}
+          <div className="flex justify-center lg:justify-end">
+            <LeaderboardCard />
           </div>
         </div>
       </section>
