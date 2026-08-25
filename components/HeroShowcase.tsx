@@ -15,7 +15,7 @@ const SCREENS: Screen[] = [
     src: '/screen-live-scores.png',
     alt: 'FanCoach live scoreboard for a Blue Jays vs Cubs game',
     title: 'Live scores, every league',
-    desc: 'MLB, NBA, NFL and soccer in one feed. Drop into any game and follow it live.',
+    desc: 'MLB, NBA, NFL, soccer and cricket in one feed. Drop into any game and follow it live.',
   },
   {
     src: '/screen-play-feed.png',

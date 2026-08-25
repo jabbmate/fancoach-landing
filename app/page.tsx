@@ -9,7 +9,7 @@ import LeaderboardCard from '@/components/LeaderboardCard'
 import AnnouncerStyles from '@/components/AnnouncerStyles'
 import { Radio, Sparkles, Trophy, ArrowUpRight, Check, Megaphone } from 'lucide-react'
 
-const LEAGUES = ['MLB', 'NBA', 'WNBA', 'NFL', 'Soccer']
+const LEAGUES = ['MLB', 'NBA', 'WNBA', 'NFL', 'Soccer', 'Cricket']
 
 const BENEFITS = [
   {
@@ -71,7 +71,7 @@ export default function Home() {
                 <AppStoreBadge />
                 <div className="text-center sm:text-left">
                   <p className="font-display text-sm font-bold text-ink">Free to download</p>
-                  <p className="text-sm text-ink-faint">iPhone · MLB, NBA, WNBA, NFL &amp; soccer</p>
+                  <p className="text-sm text-ink-faint">iPhone · MLB, NBA, WNBA, NFL, soccer &amp; cricket</p>
                 </div>
               </div>
             </div>
