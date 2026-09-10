@@ -22,6 +22,9 @@ export default function Footer() {
             <Link href="/privacy" className="text-ink-soft transition-colors hover:text-fancoach-green">
               Privacy
             </Link>
+            <Link href="/delete-account" className="text-ink-soft transition-colors hover:text-fancoach-green">
+              Delete account
+            </Link>
             <Link href="/hiring" className="text-ink-soft transition-colors hover:text-fancoach-green">
               We&apos;re hiring
             </Link>
