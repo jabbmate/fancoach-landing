@@ -5,6 +5,7 @@ import HeroShowcase from '@/components/HeroShowcase'
 import PhoneFrame from '@/components/PhoneFrame'
 import VideoShowcase from '@/components/VideoShowcase'
 import AppStoreBadge from '@/components/AppStoreBadge'
+import AndroidDownloadBadge from '@/components/AndroidDownloadBadge'
 import LeaderboardCard from '@/components/LeaderboardCard'
 import AnnouncerStyles from '@/components/AnnouncerStyles'
 import { Radio, Sparkles, Trophy, ArrowUpRight, Check, Megaphone } from 'lucide-react'
@@ -52,7 +53,7 @@ export default function Home() {
                   <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-fancoach-green" />
                 </span>
                 <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-ink-soft">
-                  Now live on the App Store
+                  Now available on iOS &amp; Android
                 </span>
               </div>
 
@@ -67,11 +68,16 @@ export default function Home() {
                 sense.
               </p>
 
-              <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
-                <AppStoreBadge />
-                <div className="text-center sm:text-left">
+              <div className="mt-9 flex flex-col items-center gap-4 lg:items-start">
+                <div className="flex flex-col items-center gap-3 sm:flex-row">
+                  <AppStoreBadge />
+                  <AndroidDownloadBadge />
+                </div>
+                <div className="text-center lg:text-left">
                   <p className="font-display text-sm font-bold text-ink">Free to download</p>
-                  <p className="text-sm text-ink-faint">iPhone · MLB, NBA, WNBA, NFL, soccer &amp; cricket</p>
+                  <p className="text-sm text-ink-faint">
+                    iPhone &amp; Android · Android installs securely via APK
+                  </p>
                 </div>
               </div>
             </div>

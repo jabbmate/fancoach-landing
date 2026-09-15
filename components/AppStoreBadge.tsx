@@ -9,7 +9,7 @@ export default function AppStoreBadge({ className = '' }: { className?: string }
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Download FanCoach on the App Store"
-      className={`inline-flex transition-transform duration-200 hover:-translate-y-0.5 ${className}`}
+      className={`inline-flex rounded-[9px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fancoach-green ${className}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
