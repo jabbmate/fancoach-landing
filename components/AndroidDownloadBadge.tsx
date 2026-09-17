@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ANDROID_SIDELOAD_URL =
-  'https://expo.dev/accounts/yuva2001/projects/fancoach/builds/2cd757fd-3e4b-4612-9692-4aa516ec75dc'
+  'https://expo.dev/accounts/yuva2001/projects/fancoach/builds/d7b0abfa-a92e-47d0-8b02-2d7b9adabe01'
 
 export default function AndroidDownloadBadge({ className = '' }: { className?: string }) {
   return (
